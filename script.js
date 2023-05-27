@@ -57,17 +57,15 @@ let users = [
 
 let newUsers = users.map(user => {
 	return {
-				...user,
-		  balance: user.balance.replace('$', '').replace(',', '')
+	...user,
+	balance: user.balance.replace('$', '').replace(',', '')
 	}
-});
-console.log(newUsers);
-	
+	});
+	console.log(newUsers);
+		
 let arrPhone = newUsers.filter(function(newUser) {
 	return newUser.balance > 2000;
-}).map(function(newUser){
-	return newUser.phone;
-})
+	})
 console.log(arrPhone);
 	
 let totalBalance = newUsers.reduce((total, newUser) => {
